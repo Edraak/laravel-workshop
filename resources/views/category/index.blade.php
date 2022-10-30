@@ -29,7 +29,7 @@
                         <td>{{$category->name}}</td>
                         <td>{{$category->description}}</td>
                         <td>{{$category->created_at}}</td>
-                        <td>
+                        <td style="display: flex;justify-content: space-between">
                             <a href="{{route('category.edit',$category->id)}}" class="btn btn-primary">Edit</a>
 
                             <form action="{{route('category.destroy',$category->id)}}" method="post">

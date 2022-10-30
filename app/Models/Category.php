@@ -11,6 +11,11 @@ class Category extends Model
 
     protected $table = "categories";
 
-    protected $fillable = ['id','name','description','created_at','updated_at'];
+    protected $fillable = ['id', 'name', 'description', 'created_at', 'updated_at'];
 
+    // one category has many product
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
 }
